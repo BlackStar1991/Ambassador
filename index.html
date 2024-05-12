@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ukraine's new ambassador to the UK</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,900;1,900&family=Protest+Revolution&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <canvas id="canvas"></canvas>
+    <div class="block_text">
+        <h1 class="block_title">Iron General</h1>
+        <blockquote>Things will still be very difficult for us, but one thing is certain: we will never be ashamed
+            again.
+        </blockquote>
+
+
+        <audio id="player" preload crossorigin="anonymous" onloadstart="this.volume=0.5"
+               src="The-Unholy-Grail.m4a"></audio>
+        <div class="block_audio">
+            <button id="playButton" type="button"></button>
+
+            <div class="audio_val">
+                <div class="audio_val_1">
+                    <div class="audio_val__dynamic"></div>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i class="hidden"></i>
+                    <i class="hidden"></i>
+                    <i class="hidden"></i>
+                    <i class="hidden"></i>
+                    <i class="hidden"></i>
+                </div>
+                <div class="audio_val__wrapp audio_val_2">
+                    <input id="audioVolume" type="range" value="0.5" step="0.1" min="0" max="1">
+                    <output for="audioVolume">0.5</output>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="block_img">
+        <img class="arc_img" src="img/arc2.png" alt="arc">
+        <img class="main_img" src="img/iron-general3.png" alt="iron general">
+    </div>
+
+
+    <script src="script.js"></script>
+</div>
+</body>
+</html>

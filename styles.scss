@@ -1,0 +1,162 @@
+body{
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: "Protest Revolution", sans-serif;
+  font-style: normal;
+}
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.block_text{
+  padding-left: 5vw;
+  width: 100%;
+  max-width: 45vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.block_title{
+  display: block;
+  margin: 5vh auto 2vh;
+  font-size: 10vh;
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+blockquote{
+  margin: 0;
+  font-size: 5vh;
+  line-height: 1.4;
+}
+blockquote:before{
+  content: "\0022";
+  margin-right: 6px;
+}
+blockquote:after{
+  content: "\0022";
+  margin-left: 6px;
+}
+
+.arc_img{
+  position: absolute;
+  right: 4%;
+  bottom: 0;
+  height: 100dvh;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px #207CB9);
+}
+
+
+.block_img{
+  position: relative;
+}
+
+.main_img{
+  position: relative;
+  align-self: flex-end;
+  height: 100dvh;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.block_audio{
+  position: relative;
+  z-index: 4;
+  margin-top: auto;
+  margin-bottom: 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+#playButton{
+  width: 15vh;
+  height: 15vh;
+  cursor: pointer;
+  border: 0;
+  background:  url("img/button-play.svg") 50% 50% no-repeat, url("img/button.svg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+#playButton.active{
+  background:  url("img/button-pause.svg") 50% 50% no-repeat, url("img/button.svg") 50% 50% no-repeat;
+}
+
+
+#audioVolume{
+
+  width: 10vw;
+
+  cursor: grab;
+  &::-webkit-slider-runnable-track,
+  &::-moz-range-track{
+    background: #207CB9;
+    border: none;
+    border-radius: 3px;
+    height: 8px;
+  }
+  &:active{
+    cursor: grabbing;
+  }
+}
+
+output{
+  margin-left: 4px;
+  line-height: 26px;
+  font-size: 18px;
+}
+
+.audio_val__wrapp{
+  display: inline-flex;
+
+}
+
+.audio_val_1{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  i{
+    display: inline-block;
+    width: 5%;
+    margin-left: 2%;
+    background-color: #0e6090;
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        height: 10px*$i;
+        filter: brightness(calc(1 + (0.12 * $i)));
+      }
+    }
+  }
+
+
+
+}
+.audio_val__dynamic{
+  width: 5vh;
+  height: 5vh;
+  background: url("img/button-volume.svg") 50% 50% no-repeat;
+}
+
+.hidden{
+  display: none!important;
+}
