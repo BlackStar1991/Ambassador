@@ -49,12 +49,13 @@ blockquote {
 
 blockquote:before {
   content: '"';
-  margin-right: 6px;
+  margin-right: 2px;
 }
 
 blockquote:after {
+  display: inline-block;
   content: '"';
-  margin-left: 6px;
+  margin-left: 2px;
 }
 
 .arc_img {
@@ -94,12 +95,17 @@ blockquote:after {
   height: 15vh;
   cursor: pointer;
   border: 0;
-  background: url("img/button-play.svg") 50% 50% no-repeat, url("img/button.svg") 50% 50% no-repeat;
+  border-radius: 50%;
+  background: url("https://raw.githubusercontent.com/BlackStar1991/Ambassador/main/img/button-play.svg") 50% 50% no-repeat, url("https://raw.githubusercontent.com/BlackStar1991/Ambassador/main/img/button.svg") 50% 50% no-repeat;
   background-size: cover;
+  transition: 0.12s ease-in;
+}
+#playButton:hover {
+  filter: drop-shadow(0 0 20px #207CB9);
 }
 
 #playButton.active {
-  background: url("img/button-pause.svg") 50% 50% no-repeat, url("img/button.svg") 50% 50% no-repeat;
+  background: url("https://raw.githubusercontent.com/BlackStar1991/Ambassador/main/img/button-pause.svg") 50% 50% no-repeat, url("https://raw.githubusercontent.com/BlackStar1991/Ambassador/main/img/button.svg") 50% 50% no-repeat;
 }
 
 #audioVolume {
@@ -182,7 +188,7 @@ output {
 .audio_val__dynamic {
   width: 5vh;
   height: 5vh;
-  background: url("img/button-volume.svg") 50% 50% no-repeat;
+  background: url("https://raw.githubusercontent.com/BlackStar1991/Ambassador/main/img/button-volume.svg") 50% 50% no-repeat;
 }
 
 .hidden {
